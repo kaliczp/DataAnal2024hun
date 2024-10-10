@@ -8,7 +8,10 @@ lab <- as.data.frame(read_excel("laboradatok.xlsx"))
 ## más objektumok
 a <- 4
 b <- "élakfj"
+## Objektumok listája
 ls()
+## Objektumok struktúrája
 str(lab)
 str(a)
+## Összegzést adó függvény
 summary(lab)
