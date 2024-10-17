@@ -18,3 +18,7 @@ summary(lab)
 
 ## Látható fájlok listázása
 dir()
+
+## Az excelből szöveges formátumba elmentett adatokat betölteni
+lab1 <- read.table("laboradatok.csv", fill = TRUE, sep = ";")
+str(lab1)
