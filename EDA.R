@@ -25,3 +25,8 @@ lab1$Ca...mg.g...sz.a..[lab1$Ca...mg.g...sz.a.. > 0 & !is.na(lab1$Ca...mg.g...sz
 boxplot(lab1$Ca..mg.g.)
 boxplot(lab1$Ca..mg.g., lab1$Ca...mg.g...sz.a..)
 boxplot(lab1$Ca..mg.g., lab1$Ca...mg.g...sz.a..[lab1$Ca...mg.g...sz.a.. > 0 & !is.na(lab1$Ca...mg.g...sz.a..)])
+
+## Teljes adattábla
+boxplot(lab1)
+## Nem numerikus oszlopokat kidobtam indexszeléssel
+boxplot(lab1[ ,-c(1:7,9,10) ])
