@@ -20,5 +20,6 @@ summary(lab)
 dir()
 
 ## Az excelből szöveges formátumba elmentett adatokat betölteni
-lab1 <- read.table("laboradatok.csv", fill = TRUE, sep = ";")
+lab1 <- read.table("laboradatok.csv", header = TRUE, fill = TRUE, sep = ";", skip = 3, dec = ",")
 str(lab1)
+summary(lab1)
