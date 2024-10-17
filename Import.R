@@ -15,3 +15,6 @@ str(lab)
 str(a)
 ## Összegzést adó függvény
 summary(lab)
+
+## Látható fájlok listázása
+dir()
