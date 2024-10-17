@@ -20,3 +20,8 @@ lab1$Ca...mg.g...sz.a..[lab1$Ca...mg.g...sz.a.. > 0]
 is.na(lab1$Ca...mg.g...sz.a..)
 !is.na(lab1$Ca...mg.g...sz.a..)
 lab1$Ca...mg.g...sz.a..[lab1$Ca...mg.g...sz.a.. > 0 & !is.na(lab1$Ca...mg.g...sz.a..)]
+
+### EDA boxplot
+boxplot(lab1$Ca..mg.g.)
+boxplot(lab1$Ca..mg.g., lab1$Ca...mg.g...sz.a..)
+boxplot(lab1$Ca..mg.g., lab1$Ca...mg.g...sz.a..[lab1$Ca...mg.g...sz.a.. > 0 & !is.na(lab1$Ca...mg.g...sz.a..)])
