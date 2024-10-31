@@ -39,3 +39,13 @@ pdf()
 par(mar = c(9, 4.1, 0.2, 0.1), las = 2)
 boxplot(lab1[ ,-c(1:7,9,10) ])
 dev.off()
+
+pdf("Boxplot.pdf", width= 10/2.54, height = 10/2.54)
+par(mar = c(9, 4.1, 0.2, 0.1), las = 2)
+boxplot(lab1[ ,-c(1:7,9,10) ], ylab = "CC [mg/g]")
+dev.off()
+
+png("Boxplot.png", width= 10, height = 10, units = "cm", res = 300)
+par(mar = c(9, 4.1, 0.2, 0.1), las = 2)
+boxplot(lab1[ ,-c(1:7,9,10) ], ylab = "CC [mg/g]")
+dev.off()
