@@ -30,3 +30,12 @@ boxplot(lab1$Ca..mg.g., lab1$Ca...mg.g...sz.a..[lab1$Ca...mg.g...sz.a.. > 0 & !i
 boxplot(lab1)
 ## Nem numerikus oszlopokat kidobtam indexszeléssel
 boxplot(lab1[ ,-c(1:7,9,10) ])
+
+## Plot finomhangolás
+boxplot(lab1[ ,-c(1:7,9,10) ],main = "Boxplot")
+par("mar")
+
+pdf()
+par(mar = c(9, 4.1, 0.2, 0.1), las = 2)
+boxplot(lab1[ ,-c(1:7,9,10) ])
+dev.off()
