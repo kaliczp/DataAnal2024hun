@@ -16,6 +16,6 @@ as.Date("2024-10-31") + 1:100
 ## Adatsor elej-vége
 head(TempSopron)
 tail(TempSopron)
-SopronDate <- as.Date("1870-01-01") + 1:56247
+SopronDate <- as.Date("1869-12-31") + 1:56247
 
 plot(SopronDate, TempSopron$ta, type = "l", xaxs = "i", ylab = "Hőmérséklet")
