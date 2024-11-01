@@ -19,3 +19,26 @@ tail(TempSopron)
 SopronDate <- as.Date("1869-12-31") + 1:56247
 
 plot(SopronDate, TempSopron$ta, type = "l", xaxs = "i", ylab = "Hőmérséklet")
+
+## Idősor előállítása
+install.packages("xts")
+library(xts)
+SopronTempTS <- xts(TempSopron$ta, SopronDate)
+
+plot(SopronTempTS)
+
+## Indexelés
+plot(SopronTempTS["2023"])
+plot(SopronTempTS["2020/2023"])
+plot(SopronTempTS["2022-11-01/2023-10-31"])
+
+SopronMeanYrMax <- apply.yearly(SopronTempTS, max)
+plot(SopronMeanYrMax)
+
+## Plot összerakás
+plot.zoo(SopronMeanYrMax, type = "l", xaxs = "i", ylab = "Hőmérséklet", lwd = 2, xlab = "", xaxt = "n")
+axis(1, at = index(SopronMeanYrMax), lab = F)
+axis.Date(1, at = as.Date(paste(c(seq(1875, 2000, by = 25), 2023), 12, 31, sep = "-")), format = "%Y")
+grid(nx = NA, ny = NULL)
+
+?axis.Date
