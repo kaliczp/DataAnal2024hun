@@ -41,6 +41,11 @@ ggsurvey(dstrat) +
     aes(x = cnum, y = dnum) +
     geom_count()
 
+## two way prop
+data(Titanic)
+tab <- apply(Titanic, c(1,4), sum)
+
+
 ### Saját adatokkal
 ## Import
 library(readxl)
@@ -59,3 +64,7 @@ freq(Sajat[,9]) ## Lényegi válasz
 
 ## Feldolgozáshoz
 install.packages("Dire")
+library(Dire)
+install.package("EdSurvey")
+library(EdSurvey)
+example(mml)
